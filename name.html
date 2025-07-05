@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
+    <title>Shake Me</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html{
+            font-size: 62.5%;
+        }
+
+        body{
+            background-color: rgb(24, 19, 37);
+            display: grid;
+            justify-content: center;
+        }
+
+        h1{
+            margin-top: 250px;
+            font-size: 10rem;
+            color: aliceblue;
+            font-variant: small-caps;
+            text-align: center;
+            font-family: "Bungee Spice", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            text-shadow: -5px 10px 10px rgba(249,141,141,0.2);
+        }
+
+        h1:hover{
+            animation: shake 0.5s linear infinite;
+        }
+
+        @keyframes shake{
+            0%{
+                rotate: 0deg;
+            }
+            25%{
+                rotate: 30deg;
+            }
+            50%{
+                rotate: 0deg;
+            }
+            75%{
+                rotate: -30deg;
+            }
+            100%{
+                rotate: 0deg;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>Sandeep <br>
+        Sinha
+    </h1>
+</body>
+</html>

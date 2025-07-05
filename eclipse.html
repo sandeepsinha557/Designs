@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Solar Eclipse</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Urbanist", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400px;
+            font-style: normal;
+        }
+
+        html{
+            font-size: 62.5%;
+        }
+
+        body{
+            background-color: blanchedalmond;
+            display: grid;
+            place-items: center;
+        }
+
+        .universe{
+            width: 40rem;
+            aspect-ratio: 1;
+            background-color: rgba(255, 165, 0,0.6);
+            margin-top: 200px;
+            position: relative;
+            overflow: hidden;
+            animation: unicol 10s ease-in-out infinite;
+        }
+
+        @keyframes unicol{
+            0%{
+                background-color: rgba(255, 165, 0,0.6);
+            }
+            25%{
+                background-color: rgba(150, 121, 66, 0.6);
+            }
+            50%{
+                background-color: black;
+            }
+            75%{
+                background-color: rgba(150, 121, 66, 0.6);
+            }
+            100%{
+                background-color: rgba(255, 165, 0,0.6);
+            }
+        }
+
+        .earth{
+            width: 20rem;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background-color: orangered;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            position: relative;     
+            overflow: hidden;
+        }
+
+        .earth::after{
+            content: " ";
+            width: 20rem;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background-color: black;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: motion 10s ease-in-out infinite;
+        }
+
+        @keyframes motion{
+            0%{
+                translate: 100%;
+            }
+            50%{
+                translate: 0%;
+                scale: 0.95;
+                box-shadow: rgba(216, 216, 221, 0.8) 0px 7px 29px 0px;
+            }
+            100%{
+                translate: -100%;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="universe">
+        <div class="earth"></div>
+    </div>
+</body>
+</html>

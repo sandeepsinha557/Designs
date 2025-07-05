@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Text Reveal</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Urbanist", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400px;
+            font-style: normal;
+        }
+
+        html{
+            font-size: 62.5%;
+        }
+
+        body{
+            background-color: rgb(24, 19, 37);
+            display: grid;
+            justify-content: center;
+        }
+
+        h1{
+            margin-top: 250px;
+            font-size: 8rem;
+            color: aliceblue;
+            text-transform: uppercase;
+            text-align: center;
+            position: relative;
+        }
+
+        h1::before{
+            content: "Hello...";
+            font-size: 8rem;
+            color: yellow;
+            top: 0;
+            left: 0;
+            width: 100%;
+            text-transform: uppercase;
+            text-align: center;
+            position: absolute;
+            border-right: 2px solid yellow;
+            overflow: hidden;
+            animation: textreveal 2s linear infinite;
+        }
+
+        @keyframes textreveal{
+            0%{
+                width: 0%;
+            }
+            50%{
+                width: 100%;
+            }
+            100%{
+                width: 0%;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>Hello...</h1>
+</body>
+</html>

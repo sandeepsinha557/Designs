@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rain  Effect</title>
+
+    <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html{
+            font-size: 62.5%;
+        }
+
+        body{
+            filter: brightness(200%);
+            background-image: url("images/house.avif");
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        h1{
+            color: aliceblue;
+            margin: 100px 0;
+            font-variant: small-caps;
+            text-align: center;
+        }
+
+        .rain{
+            width: 100vw;
+            height: 100vh;
+            background-image: url("images/rain.png");
+            animation: raining 2s linear infinite;
+        }
+        
+        @keyframes raining{
+            0%{
+                background-position: 0% 0%;
+            }
+            100%{
+                background-position: 100vh 100vw;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <!-- <h1>Rain  Effect</h1> -->
+    <div class="rain"></div>
+</body>
+</html>
